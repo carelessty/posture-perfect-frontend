@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PosturePerfect Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Assuming Chart.js is used for the charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#data">Data</a></li>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="search-profile">
+            <input type="text" placeholder="Search...">
+            <img src="assets/icons/search-icon.svg" alt="Search">
+            <img src="assets/icons/user-icon.svg" alt="User">
+        </div>
+    </header>
+
+    <main>
+        <section class="summary-cards">
+            <article class="card">
+                <h2>Usage Time</h2>
+                <p>10.5 Hours</p>
+                <p>+20% from last period</p>
+            </article>
+            <article class="card">
+                <h2>Good Posture Percentage</h2>
+                <p>92%</p>
+                <p>+7% from last period</p>
+            </article>
+            <article class="card">
+                <h2>Alerts</h2>
+                <p>31</p>
+                <p>-15% from last period</p>
+            </article>
+        </section>
+
+        <section class="charts">
+            <div>
+                <canvas id="alertTrendsChart"></canvas>
+            </div>
+            <div>
+                <canvas id="usageTimeChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* charts.css */
+
+/* Global chart styles */
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 300px;
+  width: 100%;
+}
+
+/* Specific chart styles */
+#alertTrendsChart {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#usageTimeChart {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Tooltip styling */
+.chartjs-tooltip {
+  opacity: 1;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  padding: 10px;
+}
+
+/* Legend styling */
+.chartjs-legend ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.chartjs-legend li {
+  margin: 0 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.chartjs-legend li span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
