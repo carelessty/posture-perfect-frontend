@@ -24,12 +24,13 @@
             <img src="assets/icons/user-icon.svg" alt="User">
         </div>
     </header>
-    <div class="timeframe-selector">
-        <button id="dayBtn">Day</button>
-        <button id="weekBtn">Week</button>
-        <button id="monthBtn">Month</button>
-    </div>    
-    <main>
+    <!-- Data section as the default visible tab content -->
+    <section id="data-tab" class="tab-content active">
+        <div class="timeframe-selector">
+            <button id="dayBtn">Day</button>
+            <button id="weekBtn">Week</button>
+            <button id="monthBtn">Month</button>
+        </div>
         <section class="summary-cards">
             <article class="card">
                 <h2>Usage Time</h2>
@@ -46,18 +47,7 @@
                 <p>31</p>
                 <p>-15% from last period</p>
             </article>
-            <section id="data-tab" class="tab-content active">
-        <!-- Content for Data tab goes here -->
-    </section>
-    <section id="analysis-tab" class="tab-content">
-        <!-- Content for Analysis tab goes here -->
-    </section>
-    <section id="settings-tab" class="tab-content">
-        <!-- Content for Settings tab goes here -->
-    </section>
-    <!-- ...rest of your main content... -->
         </section>
-
         <section class="charts">
             <div>
                 <canvas id="alertTrendsChart"></canvas>
@@ -66,7 +56,63 @@
                 <canvas id="usageTimeChart"></canvas>
             </div>
         </section>
-    </main>
+    </section>
+
+    <section id="analysis-tab" class="tab-content">
+        <div class="timeframe-selector">
+            <button id="analysisDayBtn">Day</button>
+            <button id="analysisWeekBtn">Week</button>
+            <button id="analysisMonthBtn">Month</button>
+        </div>
+        <section class="summary-cards">
+            <article class="card">
+                <h2>Most Improved Posture</h2>
+                <p>Thursday</p>
+                <p>+30% from last week</p>
+            </article>
+            <article class="card">
+                <h2>Time Spent in Poor Posture</h2>
+                <p>2.5 Hours</p>
+                <p>-10% from last week</p>
+            </article>
+            <article class="card">
+                <h2>Average Daily Usage</h2>
+                <p>8.2 Hours</p>
+                <p>+5% from last week</p>
+            </article>
+        </section>
+        <section class="charts">
+            <div class="chart-container">
+                <canvas id="postureImprovementChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="poorPostureTimeChart"></canvas>
+            </div>
+        </section>
+    </section>
+    
+    <section id="settings-tab" class="tab-content">
+        <form class="settings-form">
+            <h2>Personalize Your Dashboard</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="notification">Enable Notifications:</label>
+                <input type="checkbox" id="notification" name="notification">
+            </div>
+            <div class="form-group">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select" name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+    
     <script src="scripts/data.js"></script>
     <script src="scripts/main.js"></script>
 </body>

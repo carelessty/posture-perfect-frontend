@@ -1,16 +1,27 @@
 // main.js
 
 document.addEventListener("DOMContentLoaded", async () => {
-  // Initialize tabs
   const tabs = document.querySelectorAll("nav ul li a");
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", (e) => {
-      e.preventDefault();
-      tabs.forEach((t) => t.classList.remove("active"));
-      e.target.classList.add("active");
+  const sections = document.querySelectorAll(".tab-content");
 
-      // Here you can add the code to display the relevant section
-      // e.g., displayData(), displayAnalysis(), or displaySettings()
+  // Modified Event Listener inside main.js
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Remove 'active' class from all tabs and sections
+      tabs.forEach((t) => t.classList.remove("active"));
+      sections.forEach((section) => section.classList.remove("active"));
+
+      // Add 'active' class to clicked tab
+      this.classList.add("active");
+
+      // Find and display the corresponding section directly using data-tab attribute
+      const activeTab = this.getAttribute("data-tab");
+      const activeSection = document.getElementById(`${activeTab}-tab`); // This line remains the same if IDs are correctly formed.
+      if (activeSection) {
+        activeSection.classList.add("active");
+      }
     });
   });
 
