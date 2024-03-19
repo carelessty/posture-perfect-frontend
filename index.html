@@ -13,18 +13,22 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#data">Data</a></li>
-                <li><a href="#analysis">Analysis</a></li>
-                <li><a href="#settings">Settings</a></li>
+                <li><a href="#" class="tab-link active" data-tab="data">Data</a></li>
+                <li><a href="#" class="tab-link" data-tab="analysis">Analysis</a></li>
+                <li><a href="#" class="tab-link" data-tab="settings">Settings</a></li>
             </ul>
-        </nav>
+        </nav> 
         <div class="search-profile">
             <input type="text" placeholder="Search...">
             <img src="assets/icons/search-icon.svg" alt="Search">
             <img src="assets/icons/user-icon.svg" alt="User">
         </div>
     </header>
-
+    <div class="timeframe-selector">
+        <button id="dayBtn">Day</button>
+        <button id="weekBtn">Week</button>
+        <button id="monthBtn">Month</button>
+    </div>    
     <main>
         <section class="summary-cards">
             <article class="card">
@@ -42,6 +46,16 @@
                 <p>31</p>
                 <p>-15% from last period</p>
             </article>
+            <section id="data-tab" class="tab-content active">
+        <!-- Content for Data tab goes here -->
+    </section>
+    <section id="analysis-tab" class="tab-content">
+        <!-- Content for Analysis tab goes here -->
+    </section>
+    <section id="settings-tab" class="tab-content">
+        <!-- Content for Settings tab goes here -->
+    </section>
+    <!-- ...rest of your main content... -->
         </section>
 
         <section class="charts">
@@ -53,7 +67,7 @@
             </div>
         </section>
     </main>
-
+    <script src="scripts/data.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
